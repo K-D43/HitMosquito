@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HitMosquito</title>
+    <style>
+        .playground{
+            position: relative;
+            background-color: green;
+            height: 500px;
+            width: 500px;
+            float: left;
+        }
+        .mosquito{
+            position: relative;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="playground" >
+        <img class="mosquito" id="mosquito" onclick="hitMosquito()" src="data:image/jpeg;base64,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" alt="">
+
+    </div>
+
+    <div class="controls">
+        <h3> 
+            <span>Total</span> 
+            <span id="totalHit" class="totalHits">0</span> 
+        </h3>
+        <button onclick="startGame()" id="btn">Start Game</button>
+
+    </div>
+
+    <script>
+        
+        let isGameStart=false
+        
+        function startGame(){
+            let hitCount=0
+            isGameStart=true
+            let mosquito = document.getElementById("mosquito");
+
+            let time=setInterval(()=>{
+            var i=Math.floor(Math.random()*500)+1;
+            var j=Math.floor(Math.random()*500)+1;
+            mosquito.style.left=i+"px";
+            mosquito.style.top=j+"px";
+        },1000);
+        setTimeout(()=>{
+            clearTimeout(time);
+            isGameStart=false;
+        },30000);
+        }
+
+        function hitMosquito(){
+            if(isGameStart){
+                hitCount++;
+                document.getElementById("totalHit").innerText=hitCount;
+            }
+           
+        }
+    </script>
+
+</body>
+</html>
